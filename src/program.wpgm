@@ -1,0 +1,23 @@
+import wollok.game.*
+import auto.*
+
+program miPrimerWollokGame {
+	game.width(14)
+	game.height(8)
+	
+	
+	game.boardGround("empedrado.jpg")
+	
+	
+	game.addVisualCharacter(autoRojo)
+	
+	
+	game.addVisual(autoAzul)
+	keyboard.w().onPressDo { autoAzul.moverArriba() }
+	keyboard.s().onPressDo { autoAzul.moverAbajo() }
+	keyboard.d().onPressDo { autoAzul.moverDerecha() }
+	keyboard.a().onPressDo { autoAzul.moverIzquierda() }
+	
+
+	game.start()
+}
